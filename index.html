@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
 
 <head>
     <meta charset="UTF-8">
@@ -9,55 +9,82 @@
     <title>url-shortening-api-master</title>
 </head>
 
-<body>
+<body id="body">
+    <nav class="mobile-nav">
 
-    <div class="main-container">
-        <section class="upper-section container">
-            <div class="naviation-bar container">
-                <div class="left-nav">
-                    <div>
-                        <img src="./images/logo.svg">
-                    </div>
-                    <ul>
-                        <li>Features</li>
-                        <li>Pricing</li>
-                        <li>Resources</li>
-                    </ul>
-                </div>
-                <div class="right-nav">
+        <div id="closeBtn">X</div>
+        <ul class="mob-links">
 
-                    <li>Log in</li>
-                    <div class="sign-up-btn">
-                        <button>Sign Up</button>
-                    </div>
+            <a id="m-features" href="#features">Features</a>
+            <a id="m-pricing" href="#pricing">Pricing</a>
+            <a id="m-resources" href="#resources">Resources</a>
+            <div class="seperator"></div>
+            <li>Log in</li>
 
-                </div>
-                <div></div>
+            <div class="sign-up-btn">
+                <button>Sign Up</button>
+
             </div>
 
 
-            <div class="flex-row margin24px">
-                <div class="left-box ">
-                    <h1>More than just shorter links</h1>
-                    <p class="para-text-color">Build your brand's recognition and get detailed insights on how your
-                        links
-                        are performing.</p>
-                    <div>
-                        <button>Get Started</button>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <section class="">
+            <div class="upper-section">
+                <div class="naviation-bar container">
+                    <div class="left-nav">
+                        <div>
+                            <a href="#home">
+                                <img src="./images/logo.svg">
+                            </a>
+                        </div>
+                        <ul class="nav-btn">
+                            <a href="#features">Features</a>
+                            <a href="#pricing">Pricing</a>
+                            <a href="#resources">Resources</a>
+                        </ul>
+                    </div>
+                    <div class="right-nav">
+                        <ul class="">
+                            <li>Log in</li>
+                        </ul>
+                        <div class="sign-up-btn">
+                            <button>Sign Up</button>
+                        </div>
+                    </div>
+
+                    <button id="burger">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="flex-row margin24px">
+                    <div class="left-box ">
+                        <h1>More than just shorter links</h1>
+                        <p class="para-text-color">Build your brand's recognition and get detailed insights on how your
+                            links
+                            are performing.</p>
+                        <div>
+                            <button>Get Started</button>
+                        </div>
+                    </div>
+                    <div class="right-box">
+                        <img src="./images/illustration-working.svg">
                     </div>
                 </div>
-                <div class="right-box">
-                    <img src="./images/illustration-working.svg">
-                </div>
-
             </div>
         </section>
-
         <section class="middle-section">
             <div class="container shorten-link-container">
                 <div class="shorten-link">
-                    <input id="input" placeholder="Paste Your Link Here....">
-                    <button class = "shorten-it"type="submit" value="Submit">Shorten it!</button>
+                    <input id="input" placeholder="Paste the Link You want to shorten it ....">
+                    <button class="shorten-it" type="submit" value="Submit">Shorten it!</button>
                 </div>
                 <!--
                 <div class="flex-row copied-links">
@@ -84,6 +111,15 @@
                 </div>
                 -->
             </div>
+            <!--
+            <div>
+                <h2>Here is the loader</h2>
+                <div class="loader">
+                    <svg src="./images/loading-loader-svgrepo-com.svg"></svg>
+                </div>
+            </div>
+        -->
+
 
             <div class="container mid-bottom">
                 <div class="mid-box">
@@ -93,11 +129,11 @@
                         statistic
                         dashboard</p>
                 </div>
-                <div>
+                <div id="features">
                     <div class="detail-box">
                         <div class="green-strip"></div>
                         <div class=" flex-row">
-                            
+
                             <div class="small-box flex-col transform-box-1">
                                 <div class="round-icon">
                                     <img src="./images/icon-brand-recognition.svg">
@@ -127,7 +163,8 @@
                                     <img src="./images/icon-fully-customizable.svg">
                                 </div>
                                 <h3>Fully Customizable</h3>
-                                <p class="p-details para-text-color">Improve brand awareness and content discoverability
+                                <p class="p-details para-text-color">Improve brand awareness and content
+                                    discoverability
                                     through
                                     customizable
                                     links, supercharging audience engagement</p>
@@ -138,52 +175,62 @@
                 </div>
         </section>
 
-        <section class="lower-section">
+        <div id="pricing">
+            <div class="lower-section">
 
-            <div class="mid-box boost-link">
-                <h2 class="white-headers">Boost your link Today</h2>
-                <div>
-                    <button class="get-started-btn">Get Started</button>
+                <div class="mid-box boost-link">
+                    <h2 class="white-headers">Boost your link Today</h2>
+                    <div>
+                        <button class="get-started-btn">Get Started</button>
+                    </div>
+
                 </div>
-
             </div>
-        </section>
+        </div>
+
 
         <section class="footer">
-            <div class="flex-row footer-grid container">
-                <div class="">
-                    <h2 class="white-headers">Shortly</h2>
-                </div>
-                <div class="">
-                    <h4>Features</h4>
-                    <ul class="footer-list">
-                        <li>Link shorteneing</li>
-                        <li>Branded links</li>
-                        <li>Analytics</li>
-                    </ul>
-                </div>
-                <div class="">
-                    <h4>Resources</h4>
-                    <ul class="footer-list">
-                        <li>Blog</li>
-                        <li>Devlopers</li>
-                        <li>Support</li>
-                    </ul>
-                </div>
-                <div class="">
-                    <h4>Company</h4>
-                    <ul class="footer-list">
-                        <li>About</li>
-                        <li>Our Team</li>
-                        <li>Careers</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <img src="./images/icon-facebook.svg">
-                    <img src="./images/icon-twitter.svg">
-                    <img src="./images/icon-pinterest.svg">
-                    <img src="./images/icon-instagram.svg">
+            <div>
+                <div class="flex-row footer-grid container">
+                    <div class="">
+                        <h2 class="white-headers">Shortly</h2>
+                    </div>
+                    <div class="">
+                        <h4>Features</h4>
+                        <ul class="footer-list">
+                            <li>Link shorteneing</li>
+                            <li>Branded links</li>
+                            <li>Analytics</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Resources</h4>
+                        <ul class="footer-list">
+                            <li>Blog</li>
+                            <li>Devlopers</li>
+                            <li>Support</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Company</h4>
+                        <ul class="footer-list">
+                            <li>About</li>
+                            <li>Our Team</li>
+                            <li>Careers</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div id="#resources">
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/" target="_blank"><img
+                                    src="./images/icon-facebook.svg"></a>
+                            <a href="https://twitter.com/home" target="_blank"><img src="./images/icon-twitter.svg"></a>
+                            <a href="https://www.pinterest.de/" target="_blank"><img
+                                    src="./images/icon-pinterest.svg"></a>
+                            <a href="https://www.instagram.com/" target="_blank"><img
+                                    src="./images/icon-instagram.svg"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

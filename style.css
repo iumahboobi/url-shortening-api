@@ -8,8 +8,14 @@
     font-size: 18px;
     font-weight: 500;
    
- 
 }
+#body {
+    overflow: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-size: 58px;
     font-weight:  700 ;
@@ -51,8 +57,15 @@ h4 {
     max-width: 1440px;
     margin: 18px auto;
 }
+.main-navigation-bar {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 8px 0;
+    background-color: black;
+}
 .upper-section {
-    background-color:#ffffff;
+    max-width: 1440px;
+    
 }
 .middle-section {
     background-color: hsl(230deg 25% 95%);
@@ -61,6 +74,21 @@ h4 {
 .container {
     max-width: 1250px;
     margin: 0 auto;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 12px 0;
+}
+  
+.sticky + .content {
+    padding-top: 0;
 }
 
 .naviation-bar {
@@ -84,7 +112,7 @@ h4 {
     list-style: none;
    
 }
-ul li {
+ul a {
     padding: 14px 24px;
 }
 
@@ -94,9 +122,63 @@ ul li {
  justify-content: flex-end;
  
 }
+.bar1,.bar2,.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color:black ;
+    margin: 6px;
+    transition: 0.4s;
+    }
 .right-nav li {
     padding: 12px 28px;
     list-style: none;
+}
+.nav-btn a:hover  {
+    color: black;
+}
+.nav-btn a, a:active, a:focus {
+    text-decoration: none;
+    color: rgba(182, 181, 180, 0.918);
+    cursor: pointer;   
+}
+.mobile-nav {
+    position: fixed;
+    background-color: #3a3053;
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    
+
+}
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 22px 38px;
+    font-size: 38px;
+}
+.mobile-nav ul {
+    display: grid;
+    text-align: center;
+}
+
+.mobile-nav ul a {
+text-decoration: none;
+list-style: none;
+}
+.mobile-nav ul li {
+    padding: 14px 24px;
+}
+.seperator {
+    width: 160px;
+    height: 1px;
+    background-color: rgb(235, 226, 234);
 }
 
 .sign-up-btn button {
@@ -110,6 +192,10 @@ ul li {
 .sign-up-btn button:hover {
     background-color: #2bd1d1d7;
 }
+#burger {
+    display: none;
+    cursor: pointer;
+}
 .box-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -117,7 +203,6 @@ ul li {
 }
 .right-box img {
     width: 100%;
-    margin-left: 66px;
 }
 .left-box {
     margin: 0 45px 0 45px ;
@@ -127,6 +212,34 @@ ul li {
 
     height: 360px;
 }
+.error {
+    border: solid 3px rgb(196, 30, 30);
+    transition: 0.8s;
+}
+.loader {
+    margin: 5rem auto;
+    text-align: center;
+}
+.loader svg {
+    height: 5.5rem;
+    width: 5.5rem;
+    fill: #2bd1d1;
+    transform-origin: 44% 50%;
+    animation: rotate 1.5s infinite linear;
+
+}
+@keyframes rotate {
+    0% {
+        transform:rotate(0);}
+        100% {
+            transform:rotate(360deg);
+        }
+    }
+.remBorder {
+    border-style: none;
+    outline: none;
+}
+
 .left-box button {
     background-color: #2bd1d1;
     cursor: pointer;
@@ -139,6 +252,22 @@ ul li {
 .left-box button:hover {
     background-color: #2bd1d1d7;
 }
+.bar1,.bar2,.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: none;
+    margin: 6px;
+    transition: 0.4s;
+    }
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-96px ,6px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
 
 .shorten-link {
     width: 91%;
@@ -170,7 +299,12 @@ ul li {
 .shorten-link button:hover {
     background-color: #2bd1d1d7;
 }
-
+.shorten-it:hover {
+    background-color: #2bd1d1d7;
+}
+#input:focus{
+    outline: none;
+}
 .copied-links {
     display: grid;
     grid-template-columns: 70% 20% 10%;
@@ -249,8 +383,6 @@ ul li {
     background-color: hsl(266deg 29% 25%);
     border-radius: 72px;
     transform: translate(34% , -50%);
-    
-
 }
 .round-icon img {
     width: 50%;
@@ -299,3 +431,90 @@ ul li {
     padding: 0 5px;
     color:hsl(0, 0%, 75%);
 }
+
+@media only screen and (max-width:376px){
+
+ .naviation-bar{
+        
+        padding: 0 12px;
+}
+.sticky {
+    padding: 0;
+}
+.right-nav, .nav-btn, .left-nav ul {
+    display: none;
+}
+.mobile-nav ul li {
+list-style: none;
+color: #fffbff;
+}
+.mob-links a,a:active, a:focus {
+cursor: pointer;
+text-decoration: none;
+color: #fffbff;
+}
+.mob-links a:hover {
+    color: rgb(77, 48, 11);
+   
+}
+
+
+
+.flex-row {
+    flex-direction: column-reverse;
+    grid-gap: 20px;
+}
+.left-box {
+    text-align: center;
+}
+.left-box h1 {
+    font-size: 30px;
+}
+#burger {
+    display: block;
+    padding: 7px 20px;
+    background-color: transparent;
+    margin: 0;
+    border: 0;
+}
+.shorten-link {
+    transform: translate(4%,-35%);
+}
+.shorten-link input {
+    width: inherit;
+    font-size: 13px;
+}
+.copied-links {
+    grid-template-columns: 1fr;
+}
+
+.shorten-link button {
+    width: inherit;
+    margin: 15px;
+}
+.green-strip {
+
+    width: inherit;
+    display: none;
+    
+}
+.small-box {
+    margin: 54px 8px;
+    width: inherit;
+    text-align: center;
+}
+.round-icon {
+    transform: translate(200%, -50%);
+}
+.round-icon img {
+    margin: 17px 0 0 0 ;
+}
+.footer-grid {
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: inherit;
+}
+
+}
+
+
