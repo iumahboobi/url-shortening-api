@@ -23,12 +23,10 @@
 
             <div class="sign-up-btn">
                 <button>Sign Up</button>
-
             </div>
-
-
         </ul>
     </nav>
+
     <div class="main-container">
         <section class="">
             <div class="upper-section">
@@ -84,7 +82,9 @@
             <div class="container shorten-link-container">
                 <div class="shorten-link">
                     <input id="input" placeholder="Paste the Link You want to shorten it ....">
-                    <button class="shorten-it" type="submit" value="Submit">Shorten it!</button>
+                    <button class="shorten-it" type="submit" value="Submit">Shorten it!
+                        <div hidden id='spinner'></div>
+                    </button>
                 </div>
                 <!--
                 <div class="flex-row copied-links">
@@ -92,6 +92,7 @@
                     <p>Link copied</p>
                     <div>
                         <button>Copy</button>
+                        <button>Remove</button>
                     </div>
                 </div>
 
@@ -120,6 +121,7 @@
             </div>
         -->
 
+            
 
             <div class="container mid-bottom">
                 <div class="mid-box">
@@ -220,7 +222,7 @@
                             <li>Contact</li>
                         </ul>
                     </div>
-                    <div id="#resources">
+                    <div id="resources">
                         <div class="social-media">
                             <a href="https://www.facebook.com/" target="_blank"><img
                                     src="./images/icon-facebook.svg"></a>
